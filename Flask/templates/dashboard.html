@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brain Tumor Detection Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #EFEEEA, #ffffff);
+      color: #333;
+    }
+
+    header {
+      background-color: #273F4F;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.8em;
+    }
+
+    .welcome {
+      font-size: 1em;
+      font-weight: 300;
+    }
+
+    nav {
+      background-color: #000000;
+      display: flex;
+      padding: 10px 40px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 30px;
+      font-size: 1.1em;
+      transition: opacity 0.3s ease;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 30px 40px;
+    }
+
+    .section-title {
+      font-size: 1.6em;
+      margin: 25px 0 15px;
+      font-weight: 600;
+      color: #273F4F;
+      border-bottom: 2px solid #FE7743;
+      padding-bottom: 5px;
+    }
+
+    .card {
+      background: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+
+    .card img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 20px;
+      object-fit: cover;
+    }
+
+    .card p, .card ul {
+      flex: 1;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .card ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #000000;
+      color: white;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+
+      .card {
+        flex-direction: column;
+      }
+
+      .card img {
+        margin: 0 0 15px;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Brain Tumor Detection Platform</h1>
+    <div class="welcome">Welcome</div>
+  </header>
+
+  <nav>
+    <a href="#">Dashboard</a>
+    <a href="/upload">Upload Scans</a>
+    <a href="/login">Logout</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact Us</a>
+  </nav>
+
+  <main>
+    <div class="section-title">Understanding the Brain</div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='brain.png') }}" alt="Brain Anatomy">
+      <p>The brain is the control center of the human body, responsible for thought, emotion, memory, and coordination. It consists of billions of neurons and glial cells, organized into lobes and structures that manage everything from motor control to complex reasoning.</p>
+    </div>
+
+    <div class="section-title">What is a Brain Tumor?</div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='brain tumor.png') }}" alt="Brain Anatomy">
+      <p>A brain tumor is an abnormal mass of tissue in which cells grow uncontrollably. Tumors can be benign (non-cancerous) or malignant (cancerous). They may originate in the brain (primary) or spread from other parts of the body (secondary).</p>
+    </div>
+
+    <div class="section-title">Common Causes & Risk Factors</div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='brain causes.png') }}" alt="Brain Anatomy">
+      <ul>
+        <li>Genetic mutations or hereditary syndromes</li>
+        <li>Exposure to high levels of radiation</li>
+        <li>Family history of brain tumors</li>
+        <li>Immune system disorders</li>
+        <li>Age and gender (some tumors are age- or sex-specific)</li>
+      </ul>
+    </div>
+
+    <div class="section-title">Types of Brain Tumors</div>
+    <div class="card">
+      <ul>
+        <li><strong>Gliomas:</strong> Originate in glial cells – includes astrocytomas, glioblastomas</li>
+        <li><strong>Meningiomas:</strong> Develop in the membranes covering the brain and spinal cord</li>
+        <li><strong>Medulloblastomas:</strong> Common in children, arise in the cerebellum</li>
+        <li><strong>Pituitary Adenomas:</strong> Affect hormonal control</li>
+        <li><strong>Schwannomas:</strong> Arise from nerve sheaths</li>
+      </ul>
+    </div>
+
+    <div class="section-title">Why Early Detection Matters</div>
+    <div class="card">
+      <p>Detecting brain tumors early improves survival and treatment outcomes. MRI scans combined with AI-powered detection platforms can identify tumors at earlier stages, enabling doctors to act faster and more effectively with surgery, chemo, or radiotherapy.</p>
+    </div>
+
+    <div class="section-title">Note for Healthcare Professionals</div>
+    <div class="card">
+      <p>This dashboard is built to assist healthcare providers in managing brain tumor cases. Use this tool alongside clinical evaluations, patient history, and diagnostic imaging to provide a comprehensive treatment plan.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Brain Tumor Detection Platform | All rights reserved
+  </footer>
+</body>
+</html>

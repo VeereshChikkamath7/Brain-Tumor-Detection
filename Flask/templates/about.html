@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>About Us | Brain Tumor Detection Platform</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+   <style>
+     * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+     }
+
+     body {
+       font-family: 'Poppins', sans-serif;
+       background: linear-gradient(to right, #EFEEEA, #ffffff);
+       color: #333;
+       min-height: 100vh;
+       display: flex;
+       flex-direction: column;
+     }
+
+     header {
+       background-color: #273F4F;
+       color: white;
+       padding: 20px 40px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+     }
+
+     nav {
+       background-color: #000000;
+       display: flex;
+       padding: 10px 40px;
+     }
+
+     nav a {
+       color: white;
+       text-decoration: none;
+       margin-right: 30px;
+       font-size: 1.1em;
+       transition: 0.3s;
+     }
+
+     nav a:hover {
+       opacity: 0.8;
+       text-decoration: underline;
+     }
+
+     main {
+       flex: 1;
+       padding: 40px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+     }
+
+     .about-container {
+       background: white;
+       padding: 40px;
+       border-radius: 12px;
+       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+       max-width: 900px;
+       text-align: center;
+     }
+
+     .about-container h2 {
+       color: #273F4F;
+       margin-bottom: 20px;
+       font-size: 2em;
+     }
+
+     .about-container p {
+       font-size: 1.1em;
+       line-height: 1.6;
+       color: #666;
+       margin-bottom: 20px;
+     }
+
+     .mission-section {
+       background-color: #EFEEEA;
+       padding: 30px;
+       margin-top: 20px;
+       border-radius: 10px;
+       text-align: center;
+     }
+
+     .mission-section h3 {
+       color: #273F4F;
+       font-size: 1.6em;
+       margin-bottom: 10px;
+     }
+
+     .team-section {
+       margin-top: 30px;
+       display: flex;
+       justify-content: center;
+       gap: 20px;
+     }
+
+     .team-card {
+       background: white;
+       padding: 20px;
+       border-radius: 10px;
+       box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+       text-align: center;
+       max-width: 280px;
+     }
+
+     .team-card img {
+       width: 120px;
+       border-radius: 50%;
+       margin-bottom: 10px;
+     }
+
+     footer {
+       text-align: center;
+       background-color: #000000;
+       color: white;
+       padding: 15px;
+     }
+
+     @media (max-width: 768px) {
+       nav {
+         flex-direction: column;
+       }
+       
+       nav a {
+         margin: 10px 0;
+       }
+
+       .team-section {
+         flex-direction: column;
+         align-items: center;
+       }
+     }
+   </style>
+</head>
+
+<body>
+  <header>
+    <h1>Brain Tumor Detection Platform</h1>
+    <div class="welcome">Welcome to Our Mission</div>
+  </header>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="#">About Us</a>
+    <a href="/contact">Contact Us</a>
+  </nav>
+
+  <main>
+    <div class="about-container">
+      <h2>Who We Are</h2>
+      <p>We are a passionate team dedicated to revolutionizing medical diagnostics through AI-driven solutions. Our platform integrates cutting-edge artificial intelligence to assist healthcare professionals in **early brain tumor detection**, improving survival rates and treatment outcomes.</p>
+
+      <div class="mission-section">
+        <h3>Our Mission</h3>
+        <p>To leverage AI-powered technology in medical imaging, making healthcare more **accessible, reliable, and efficient**. By combining deep learning models with MRI and CT scan analysis, we empower doctors with **early detection tools** that enhance patient care.</p>
+      </div>
+
+      <h2>Meet the Team</h2>
+      <div class="team-section">
+        <div class="team-card">
+          
+          <h4>Dr. John</h4>
+          <p>Lead AI Developer & Healthcare Innovator</p>
+        </div>
+        <div class="team-card">
+        
+          <h4>Dr. Smith</h4>
+          <p>Medical Imaging Specialist</p>
+        </div>
+        <div class="team-card">
+          
+          <h4>Dr. Patel</h4>
+          <p>AI Model Research & Development</p>
+        </div>
+        <div class="team-card">
+        
+          <h4>Dr. Ryan</h4>
+          <p>Researcher</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Brain Tumor Detection Platform | All rights reserved
+  </footer>
+</body>
+</html>

@@ -1,0 +1,232 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI-powered Brain Tumor Detection Platform" />
+  <title>Brain Tumor Detection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #EFEEEA, #ffffff);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #273F4F;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    nav {
+      background-color: #000000;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: url('https://images.unsplash.com/photo-1588776814546-d374277bc5c3') no-repeat center center/cover;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(39, 63, 79, 0.7); /* #273F4F with opacity */
+      z-index: 0;
+    }
+
+    .hero h2, .hero p, .hero .button-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-color: #FE7743;
+      color: #333;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #000000;
+      color: white;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #273F4F;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .about {
+      background-color: #EFEEEA;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+
+    footer {
+      background-color: #000000;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Brain Tumor Detection</h1>
+    <p>AI-powered diagnosis for better healthcare</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact Us</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Empowering Diagnosis Through AI</h2>
+    <p>Revolutionizing early tumor detection with cutting-edge technology</p>
+    <div class="button-container">
+      <a href="/login" class="btn">Login</a>
+      <a href="/registerpage" class="btn">Register</a>
+    </div>
+  </section>
+
+  <div class="container">
+    <h2 class="section-title">Key Features</h2>
+    <div class="features">
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3039/3039433.png" alt="AI Model">
+        <h3>AI-Powered Detection</h3>
+        <p>Uses CNN models to detect tumors with high precision.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Visualization">
+        <h3>Interactive Visualizations</h3>
+        <p>Gain insights from real-time MRI image visualizations.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/633/633611.png" alt="Reports">
+        <h3>Custom Reports</h3>
+        <p>Generate professional reports for doctors and patients.</p>
+      </div>
+    </div>
+
+    <section class="about">
+      <h2 class="section-title">About Us</h2>
+      <p>We are a dedicated team leveraging artificial intelligence to assist in medical diagnostics. Our mission is to simplify brain tumor detection and make healthcare accessible, reliable, and faster through modern technology.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Brain Tumor Detection | All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
